@@ -5,6 +5,7 @@ This repo holds a "RESTful" spring server with multiple get routes.
 
 #### Main Files
   * [HelloWorldController.java](.src/main/java/com/hackley/mydomain/firstWebApp/HelloWorldController.java)
+  * [AlbumController.java](.src/main/java/com/hackley/mydomain/firstWebApp/Controller/AlbumController.java)
   
 #### Test Files
   * [HelloWorldControllerTest.java](./src/test/java/com/hackley/mydomain/firstWebApp/HelloWorldControllerTest.java)
@@ -20,3 +21,9 @@ This repo holds a "RESTful" spring server with multiple get routes.
       * Ex. `/capitalize/{hello world}`       output: `HELLO WORLD`
   * `/reverse?sentence=Your sentence here`: will return the sentence you you inputted in reverse
       * Ex. `/reverse?sentence=Hello world` output: `world Hello`
+
+
+   ### AlbumController Routes
+        * `/albums` : will render a list of all albums
+        * `/form`(GET) : will render a form for a user to create a new album.
+        * `/form` (POST) : will handle form submission and redirect user to all albums page

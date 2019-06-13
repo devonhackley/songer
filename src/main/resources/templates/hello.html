@@ -1,0 +1,8 @@
+<html xmlns:th="http://www.thymeleaf/org">
+    <head>
+        <title>Hello!</title>
+    </head>
+    <body>
+        <h1> Hello <span th:each="name, iterStat : ${name}" th:text="${iterStat.last} ? ${name} : ${name} + ','"></span>! </h1>
+    </body>
+</html>

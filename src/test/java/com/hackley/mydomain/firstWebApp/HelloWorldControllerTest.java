@@ -1,5 +1,6 @@
 package com.hackley.mydomain.firstWebApp;
 
+import com.hackley.mydomain.firstWebApp.HelloWorldController;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

@@ -1,4 +1,4 @@
-package com.hackley.mydomain.firstWebApp;
+package com.hackley.mydomain.firstWebApp.Controller;
 
 import org.springframework.web.bind.annotation.*;
 

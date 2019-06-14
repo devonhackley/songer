@@ -1,9 +1,7 @@
 package com.hackley.mydomain.firstWebApp.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -15,6 +13,18 @@ public class Album {
     private int songCount;
     private int length;
     private String imgUrl;
+
+    @OneToMany(mappedBy = "album")
+    private List<Song> songs;
+
+
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(List<Song> songs) {
+        this.songs = songs;
+    }
 
     public int getSongCount() {
         return songCount;

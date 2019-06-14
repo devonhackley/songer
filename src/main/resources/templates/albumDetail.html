@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Albums</title>
+</head>
+<body>
+<h1>Album Details: </h1>
+<span>
+    <img th:src="${album.imgUrl}">
+</span>
+<span>Title: </span>
+<p th:text="${album.title}"></p>
+<br>
+<span>Artist: </span>
+<p th:text="${album.artist}"></p>
+<br>
+<span>Number of songs: </span>
+<p th:text="${album.songCount}"></p>
+<br>
+<span>Album length: </span>
+
+<p th:text="${album.length}"></p>
+<br>
+
+<ul>
+    <li th:each="song : ${songs}">
+        <span>Title: </span>
+        <span th:text="${song.title}"></span>
+        <br>
+        <span>Song length: </span>
+        <span th:text="${album.length}"></span>
+        <br>
+    </li>
+</ul>
+
+<a href="/form-song"><button>Add a song</button></a>
+</body>
+</html>
